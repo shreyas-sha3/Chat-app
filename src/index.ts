@@ -3,7 +3,6 @@ import http from "http";
 import { Server, Socket } from "socket.io";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
-import ThemeToggle from './themestoggle';
 
 const app = express();
 const server = http.createServer(app);
@@ -67,13 +66,3 @@ server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-import ThemeToggle from './themestoggle';
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <div style={{ background: 'var(--bg)', color: 'var(--fg)', minHeight: '100vh' }}>
-      <ThemeToggle />
-      <h1 style={{ padding: '16px' }}>Welcome to the Chat App</h1>
-    </div>
-  </React.StrictMode>
-);
